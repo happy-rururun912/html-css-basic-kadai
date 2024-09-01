@@ -1,0 +1,40 @@
+body{
+  font-family:"Arial", "Meiryo", sans-serif;
+}
+.google-fonts{
+  /*h1にはGoogle fontsを指定します*/
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+html {
+  /*フォントサイズと文字の位置を指定します*/
+  font-size: 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 2rem;
+  letter-spacing: 48px;
+  text-shadow: 3px 3px 5px gray;
+  border-bottom: solid 3px rgb(115, 115, 114);
+}
+.font-M {
+  /*Mの色を指定*/
+  color: skyblue;
+}
+.font-P {
+  /*Pの色を指定*/
+  color: rgb(255, 192, 203) ;
+}
+.text-blue {
+  /*生年月日、趣味、プログラミングを始めた理由に色を指定*/
+  color: skyblue;
+}
+.text-pink {
+  /*名前、血液型、好きな食べ物に色を指定*/
+  color: rgb(255, 192, 203) ;
+} 
+#basic div {
+  font-weight: bold;
+}
