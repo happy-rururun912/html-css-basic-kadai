@@ -1,0 +1,115 @@
+h1{
+  padding: 0px; /*余白*/
+  margin: 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+p {
+  padding: 0px; /*余白*/
+  margin: 0px;
+  font-size: 20px;
+}
+
+body {
+  padding: 0px; /*余白*/
+  margin: 0px;
+}
+
+a {
+  font-size: 20px;
+}
+
+header {
+  padding-bottom: 20px; /*余白*/
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center; /*要素を中央揃え*/
+}
+
+main {
+  padding: 10px; /*余白*/
+  margin: 10px;
+}
+
+#parent,img {
+  display: flex;
+  justify-content: space-between; /*左端と右端を両端、あとは均等揃え*/
+  margin: 10px 0;
+  width: 70%;
+}
+
+/*content要素の装飾*/
+.contents1 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 192px; /*親要素*/
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents2 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 192px;
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents3 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 192px;
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+/*h2要素の装飾*/
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+  }
+
+h2::before{
+    content: "●"; /*記号の設定*/
+    color: rgb(239, 111, 139);
+  }
+
+  /*傘　装飾*/
+div p:nth-of-type(2)::first-letter {
+  font-weight: bold; 
+  color: rgb(97, 206, 249);
+}
+
+/*SAMURAI NEWS　装飾*/
+footer {
+  color: rgb(244, 79, 79);
+  text-align: center;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+a:visited {
+  color: rgb(193, 234, 251);
+}
+
+a:hover {
+  color: rgb(245, 178, 168);
+}
+
+/*以下は画面幅が768px以下の時にスタイルが適応される*/
+@media screen and(max-width:768px) {
+}
+  /*ここに通常のcssを記述*/
+h2 {
+  font-size: 25px;
+}
+
+p {
+  font-size: 25px;
+}
+
+#parent {
+  align-items: baseline;
+}
