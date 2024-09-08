@@ -1,17 +1,17 @@
 h1{
-  padding: 0px; /*余白*/
+  padding: 0px; /*上下左右の余白*/
   margin: 0px;
-  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 p {
-  padding: 0px; /*余白*/
+  padding: 0px; /*上下左右の余白*/
   margin: 0px;
   font-size: 20px;
 }
 
 body {
-  padding: 0px; /*余白*/
+  padding: 0px; /*上下左右の余白*/
   margin: 0px;
 }
 
@@ -20,47 +20,60 @@ a {
 }
 
 header {
-  padding-bottom: 20px; /*余白*/
   margin-bottom: 20px;
   background-color: rgb(244, 79, 79);
   text-align: center; /*要素を中央揃え*/
 }
 
 main {
-  padding: 10px; /*余白*/
+  padding: 10px; /*上下左右の余白*/
   margin: 10px;
 }
 
-#parent,img {
+#parent {
   display: flex;
   justify-content: space-between; /*左端と右端を両端、あとは均等揃え*/
   margin: 10px 0;
-  width: 70%;
 }
 
 /*content要素の装飾*/
 .contents1 {
   border: solid 3px rgb(238, 204, 204);
-  flex-basis: 192px; /*親要素*/
+  flex-basis: 192px; /*幅は親要素の２５％*/
   padding: 10px 15px; /*要素内の余白*/
   margin: 20px 0; /*要素外の余白*/
   text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents1 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 700px; /*画面幅*/
 }
 
 .contents2 {
   border: solid 3px rgb(238, 204, 204);
-  flex-basis: 192px;
+  flex-basis: 192px; /*幅は親要素の２５％*/
   padding: 10px 15px; /*要素内の余白*/
   margin: 20px 0; /*要素外の余白*/
   text-align: center; /*中の要素を中央揃え*/
 }
 
+.contents2 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 700px; /*画面幅*/
+}
+
 .contents3 {
   border: solid 3px rgb(238, 204, 204);
-  flex-basis: 192px;
+  flex-basis: 192px; /*幅は親要素の２５％*/
   padding: 10px 15px; /*要素内の余白*/
   margin: 20px 0; /*要素外の余白*/
   text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents3 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 700px; /*画面幅*/
 }
 
 /*h2要素の装飾*/
@@ -82,7 +95,7 @@ div p:nth-of-type(2)::first-letter {
 
 /*SAMURAI NEWS　装飾*/
 footer {
-  color: rgb(244, 79, 79);
+  background-color: rgb(244, 79, 79);
   text-align: center;
 }
 
@@ -99,17 +112,15 @@ a:hover {
 }
 
 /*以下は画面幅が768px以下の時にスタイルが適応される*/
-@media screen and(max-width:768px) {
-}
-  /*ここに通常のcssを記述*/
-h2 {
-  font-size: 25px;
-}
-
-p {
-  font-size: 25px;
-}
-
-#parent {
-  align-items: baseline;
+@media screen and (max-width: 768px) {
+ h2 {
+   font-size: 30px; 
+  }
+  p {
+   font-size: 25px;
+  }
+  #parent {
+   display: flex;
+   flex-direction: column;
+  }
 }
