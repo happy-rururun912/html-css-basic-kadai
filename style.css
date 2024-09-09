@@ -1,40 +1,125 @@
-body{
-  font-family:"Arial", "Meiryo", sans-serif;
+h1{
+  padding: 0px; /*上下左右の余白*/
+  margin: 0px;
+  color: rgb(255, 255, 255);
 }
-.google-fonts{
-  /*h1にはGoogle fontsを指定します*/
-  font-family: "Josefin Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
-html {
-  /*フォントサイズと文字の位置を指定します*/
+
+p {
+  padding: 0px; /*上下左右の余白*/
+  margin: 0px;
   font-size: 20px;
+}
+
+body {
+  padding: 0px; /*上下左右の余白*/
+  margin: 0px;
+}
+
+a {
+  font-size: 20px;
+}
+
+header {
+  margin-bottom: 20px;
+  background-color: rgb(244, 79, 79);
+  text-align: center; /*要素を中央揃え*/
+}
+
+main {
+  padding: 10px; /*上下左右の余白*/
+  margin: 10px;
+}
+
+#parent {
+  display: flex;
+  justify-content: space-between; /*左端と右端を両端、あとは均等揃え*/
+}
+
+/*content要素の装飾*/
+.contents1 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%; /*幅は親要素の２５％*/
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents1 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 70%; /*画面幅*/
+}
+
+.contents2 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%; /*幅は親要素の２５％*/
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents2 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 70%; /*画面幅*/
+}
+
+.contents3 {
+  border: solid 3px rgb(238, 204, 204);
+  flex-basis: 25%; /*幅は親要素の２５％*/
+  padding: 10px 15px; /*要素内の余白*/
+  margin: 20px 0; /*要素外の余白*/
+  text-align: center; /*中の要素を中央揃え*/
+}
+
+.contents3 img { /*画像のサイズ*/
+  margin: 10 0px; /*左右の余白*/
+  width: 70%; /*画面幅*/
+}
+
+/*h2要素の装飾*/
+h2 {
+  font-size: 25px;
+  border-bottom: 3px dotted rgb(236, 122, 122);
+  }
+
+h2::before{
+    content: "●"; /*記号の設定*/
+    color: rgb(239, 111, 139);
+  }
+
+  /*傘　装飾*/
+div p:nth-of-type(2)::first-letter {
+  font-weight: bold; 
+  color: rgb(97, 206, 249);
+}
+
+/*SAMURAI NEWS　装飾*/
+footer {
+  background-color: rgb(244, 79, 79);
   text-align: center;
 }
-h1 {
-  font-size: 2rem;
-  letter-spacing: 1.2rem;
-  text-shadow: 3px 3px 5px gray;
-  border-bottom: solid 3px rgb(115, 115, 114);
+
+a {
+  color: rgb(255, 255, 255);
 }
-.font-M {
-  /*Mの色を指定*/
-  color: skyblue;
+
+a:visited {
+  color: rgb(193, 234, 251);
 }
-.font-P {
-  /*Pの色を指定*/
-  color: rgb(255, 192, 203) ;
+
+a:hover {
+  color: rgb(245, 178, 168);
 }
-.text-blue {
-  /*生年月日、趣味、プログラミングを始めた理由に色を指定*/
-  color: skyblue;
-}
-.text-pink {
-  /*名前、血液型、好きな食べ物に色を指定*/
-  color: rgb(255, 192, 203) ;
-} 
-#basic div {
-  font-weight: bold;
+
+/*以下は画面幅が768px以下の時にスタイルが適応される*/
+@media screen and (max-width: 768px) {
+ h2 {
+   font-size: 30px; 
+  }
+  p {
+   font-size: 25px;
+  }
+  #parent {
+   display: flex;
+   flex-direction: column;
+  }
 }
