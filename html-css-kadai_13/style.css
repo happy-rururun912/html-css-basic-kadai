@@ -1,0 +1,158 @@
+/*pc,スマホ共通スタイル*/
+p {
+  font-size: 15px;
+}
+
+body {
+  max-width: 1080px;
+  margin: 0 auto 0 auto;
+  font-family: "Source Sans Pro", "Hiragino kaku Gothic Pron", Meiryo, arial, sans-serif;
+}
+
+/*ヘッダー*/
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+}
+
+/*pc用レイアウト*/
+/*ナビゲーションのレイアウト*/
+#nav-pc {
+  font-size: 14px;
+}
+
+#nav-pc ul {
+   display: flex;
+}
+
+#nav-pc li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#nav-pc a {
+  text-decoration: none;
+  color: black;
+}
+
+#nav-sp {
+  display: none;
+}
+
+#menu-sp {
+  display: none;
+}
+
+main {
+  padding: 0px 50px;
+}
+
+#main-visual img {
+   width: 100%;
+}
+
+
+/*スマホ向けレイアウト*/
+@media screen and (max-width: 767px) {
+body{
+min-width: 375px;
+margin: 0;
+}
+
+header {
+  padding: 0;
+}
+
+
+/*pc用ナビゲーション非表示*/
+#nav-pc {
+  display: none;
+}
+
+/*ハンバーガーメニュー非表示*/
+#menu-sp {
+  display: block;
+  float: right;
+  padding: 0;
+}
+
+button {
+   border: none;
+}
+
+/*スマホ用ナビゲーション*/
+#nav-sp {
+  background-color: #ce933e;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  z-index: 100;
+}
+
+#nav-sp ul {
+  padding-left: 0;
+}
+
+#nav-sp li {
+  list-style: none;
+}
+
+#nav-sp a {
+  display: block;
+}
+
+/*×ボタン*/
+#close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+}
+
+/*ナビゲーションメニュー用ロゴ*/
+#logo-sp {
+  margin: 80px 0px 30px 20px;
+}
+
+#logo-sp a {
+  display: block;
+}
+
+#nav-sp a:link {
+  color: #ffffff;
+}
+
+/*ナビゲーションのリンク装飾*/
+#nav-sp a:visited {
+  color: #ffffff;
+}
+
+#nav-sp a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+#nav-sp a:active {
+  color: #ffffff;
+}
+
+#nav-sp .menu {
+  text-decoration: none;
+  display: block;
+  margin: 0px 20px;
+  height: 44px;
+  font-size: 16px;
+  background-image: url("image/arrow.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+main {
+  padding: 0;
+}
+}
+
